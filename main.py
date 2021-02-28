@@ -4,6 +4,10 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 class IndeedBot:
 
@@ -154,16 +158,16 @@ class IndeedBot:
 if __name__ == '__main__':
 
     profile = {
-        'name': "John Fisher",
-        'email': "jfishersolutions@gmail.com",
-        'phone_number': '860-364-3249',
+        'name': "Shiv Contractor",
+        'email': "shiv.contractor@tum.de",
+        'phone_number': '01629440949',
         'resume': os.getcwd() + '\\resume.txt'
     }
     
     id_bot = IndeedBot()
 
     # keywords, city, state
-    id_bot.query('python developer', 'dallas', 'tx')
+    id_bot.query('python developer', 'munich', 'Germany')
 
     id_bot.find_express_jobs()
     
